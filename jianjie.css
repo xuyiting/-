@@ -1,0 +1,628 @@
+/*分割线*/
+.cut-off{
+    width: 91.7vw;
+    margin-left: 3.7vw;
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+}
+.cut-off span{
+    width: 11vw;
+    display: inline-block;
+    color: rgba(25, 25, 25, 0.77);
+    font-size: 1.5vw;
+    font-family: Verdana, Geneva, sans-serif;
+    letter-spacing: 0.3vw;
+    margin-top: 4vw;
+    border-bottom: 2px solid rgba(25, 25, 25, 0.67);
+
+}
+
+/*首页导航右侧*/
+.home .nav{
+    height: 7.3vw;
+    width: 100%;
+    background-color: #868686;
+    border-bottom: 2px solid white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+    transition: 1s;
+}
+.home .nav .nav-right{
+    float: right;
+    padding-right: 4vw;
+}
+.home .nav .nav-right a{
+    width: 9vw;
+    height: 7.3vw;
+    min-width: 84px;
+    text-align: center;
+    color:white;
+    font-size: 1.2vw;
+    display: inline-block;
+    float: left;
+    padding-top:2.7vw;
+    padding-bottom: 1.4vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 1s;
+}
+.home .nav .nav-right a .nav-english{
+    visibility: hidden;
+    opacity:0;
+    transition: opacity 600ms;
+}
+.home .nav .nav-right a:hover .nav-english{
+    visibility:visible;
+    opacity:1;
+}
+.home .nav .nav-right a:hover{
+    color: #8eeefa;
+}
+/*首页导航左侧*/
+.home .nav .nav-left{
+    float: left;
+    margin-left: 5vw;
+    color: white;
+    font-size: 3.3vw;
+    line-height: 7.3vw;
+    letter-spacing: 0.3vw;
+    text-shadow: 3px 3px 5px;
+    transition: 1s;
+}
+.active{
+    background-color: rgb(96, 96, 96);
+    border: 1px solid white;
+    border-bottom: 0px;
+}
+/*首页背景、文字*/
+.home .background{
+    height: 49vw;
+    /*width: 98.7vw;*/
+    background-image: url("./images/shouye1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.home .background span{
+    font-size: 5vw;
+    color: #79520b;
+    text-shadow: 1vh 1vh 1vh #BA9A5A;
+    font-family: 'Comic Sans MS', cursive;
+}
+.home .background .letter1{
+    float: left;
+    margin-left: 25%;
+    margin-top: 10%;
+    letter-spacing: 1.5vw;
+}
+.home .background .letter2{
+    float: left;
+    margin-left: 28%;
+    margin-top: 0.5%;
+    letter-spacing: 1.5vw;
+
+}
+.home .background .letter2 .clik-me{
+    cursor: pointer;
+}
+.home .background .letter2 .hand{
+    display: inline-block;
+    font-size: 0.9vw;
+    color: #79520b;
+    position: relative;
+    top:4vw;
+    left:-28vw;
+    animation: clickon 900ms linear 0s infinite normal;
+}
+@keyframes clickon {
+    0%{
+        opacity: 1;
+        top:4vw;
+    }
+    50%{
+        opacity:0.5;
+        top:3vw;
+    }
+    100%{
+        opacity: 1;
+        top:4vw;
+    }
+}
+
+/*首页弹出框*/
+.home .background .say-hello{
+    float: left;
+    margin-left: 30%;
+    margin-top: 0.3%;
+    letter-spacing: 1.4vw;
+    opacity: 0;
+    position: relative;
+
+}
+.home .background .say-hello.name{
+    animation: name 2s linear;
+    opacity: 1;
+}
+@keyframes name {
+    0%{
+        opacity:0;
+        bottom: 5vw;
+    }
+    100%{
+        opacity: 1;
+        bottom:0;
+    }
+}
+/*关于我-简介*/
+.campus .school-life{
+    width: 53vw;
+    min-width: 435px;
+    min-height: 200px;
+    background: linear-gradient(to bottom, #dbdbdb, #ececec, #FFFFFF);
+    background-color: rgba(255,255,255,0.4);
+    border:3px solid #f4f4f4;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 4.5vw;
+    margin-left: 3.7vw;
+    padding: 2.5vw 2.9vw 2.5vw 2.9vw;
+    box-shadow: 1px 1px 4px #b19247;
+    position: relative;
+    opacity: 0;
+}
+.campus .school-life .school{
+    font-size: 1.5vw;
+    /*font-weight: bold;*/
+    line-height:2;
+}
+.campus .school-life .school span{
+    display: inline-block;
+    margin-right: 5vw;
+}
+.campus .school-life .major{
+    font-size: 1vw;
+    line-height:3.3;
+    /*font-family: ‘Arial Black’, Gadget, sans-serif;*/
+}
+ .campus .school-life .major .position{
+    font-size: 1.1vw;
+    line-height:2;
+}
+.campus .school-life.flowl{
+     animation: flowl 3s linear ;
+     opacity: 1;
+ }
+@keyframes flowl {
+    0%{
+        opacity: 0;
+        left:-25vw;
+    }
+    100%{
+        opacity: 1;
+        left:0;
+    }
+}
+
+/*关于我-轮播图*/
+:root{
+    --width: 22;
+    --height: 18;
+    --minwidth:200;
+}
+.carousel{
+    display: inline-block;
+    perspective: 800px;
+    -webkit-perspective: 800px;
+}
+.carousel ul{
+    height: 16vw;
+    /*width: 22vw;*/
+    width: calc(var(--width) * 1vw);
+    position: relative;
+    transform-style: preserve-3d;
+    animation: sport 15s linear 0s infinite normal;
+    /*transform: rotateY(0deg) rotateX(0deg);*/
+    left:10vw;
+    top:5vw;
+}
+.carousel ul li{
+    height: 16vw;
+    /*width: 22vw;*/
+    width: calc(var(--width) * 1vw);
+    /*min-height: 180px;*/
+    /*min-width: 200px;*/
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: absolute;
+}
+.carousel .picture1{
+    background-image: url(./images/xiaoyuan1.jpg);
+    transform: translateX(calc(var(--width) * 0.5vw)) rotateY(90deg);
+}
+.carousel .picture2{
+    background-image: url(./images/xiaoyuan2.jpg);
+    transform: translateX(calc(var(--width) * -0.5vw)) rotateY(90deg);
+}
+.carousel .picture3{
+    background-image: url(./images/xiaoyuan3.jpg);
+    transform: translateZ(calc(var(--width) * 0.5vw)) rotateY(180deg);
+}
+.carousel .picture4{
+    background-image: url(images/xiaoyuan4.jpg);
+    transform: translateZ(calc(var(--width) * -0.5vw)) rotateY(360deg);
+}
+@media screen and (max-width: 1000px){
+    .carousel ul,
+    .carousel ul li{
+        height: 180px;
+        width: 220px;
+    }
+    .carousel .picture1{
+        /*background-image: url(./images/xiaoyuan1.jpg);*/
+        transform: translateX(calc(220 * 0.5px)) rotateY(90deg);
+    }
+    .carousel .picture2{
+        /*background-image: url(./images/xiaoyuan2.jpg);*/
+        transform: translateX(calc(220 * -0.5px)) rotateY(90deg);
+    }
+    .carousel .picture3{
+        /*background-image: url(./images/xiaoyuan3.jpg);*/
+        transform: translateZ(calc(220 * 0.5px)) rotateY(180deg);
+    }
+    .carousel .picture4{
+        /*background-image: url(images/xiaoyuan4.jpg);*/
+        transform: translateZ(calc(220 * -0.5px)) rotateY(360deg);
+    }
+}
+@keyframes sport {
+    0%{
+        /*transform: rotateX(0deg);*/
+        transform: rotateY(0deg);
+    }
+    25%{
+        /*transform: rotateX(90deg);*/
+        transform: rotateY(90deg);
+    }
+    50%{
+        /*transform: rotateX(180deg);*/
+        transform: rotateY(180deg);
+    }
+    75%{
+        /*transform: rotateX(270deg);*/
+        transform: rotateY(270deg);
+    }
+    100%{
+        /*transform: rotateX(360deg);*/
+        transform: rotateY(360deg);
+    }
+}
+.carousel ul:hover{
+    animation-play-state: paused;
+}
+.barrier{
+    height: 40px;
+}
+
+/*荣誉与技能*/
+.honor,.skill{
+    width: 43vw;
+    min-width: 393px;
+    min-height: 265px;
+    border: 3px solid #f4f4f4;
+    background: linear-gradient(to bottom, #dbdbdb, #ececec, #FFFFFF);
+    box-shadow: 1px 1px 4px #b19247;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 3vw;
+    padding: 1.8vw 3.5vw 1.8vw 3.7vw;
+    position: relative;
+
+}
+.honor{
+    margin-left: 3.8vw;
+}
+.honor .prize{
+    font-size: 1.2vw;
+    line-height:2.9;
+}
+.honor .prize p:hover i{
+    color: #f2f200;
+}
+.caption{
+    font-weight: bold;
+    font-size: 1.4vw;
+    line-height:3;
+}
+.skill{
+    margin-right: 4vw;
+}
+.skill .progress-box{
+    padding: 0.8vw 0;
+}
+.skill .progress-box span{
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+.skill .progress{
+    height: 0.7vw;
+    width: 27.7vw;
+    min-width: 239px;
+    min-height: 7px;
+    background: #a6d1df;
+    padding: 0.2vw;
+    border-radius: 1.4vw;
+    border-top: 1px solid #b9e5f3;
+    border-bottom: 1px solid #76a0ae;
+    margin-left: 1.1vw;
+    vertical-align: middle;
+    display: inline-block;
+}
+.skill .progress .progress-bar{
+    height: 100%;
+    border-radius: 1.4vw;
+    position: relative;
+    background: linear-gradient(to right, #2c3b4e, #6c8aac, #2c3b4e);
+}
+.activebar{
+    animation: animate-positive 3s;
+    -webkit-animation: animate-positive 3s;
+}
+.skill .progress .progress-value{
+    display: block;
+    padding: 0.1vw 0.3vw;
+    font-size: 0.7vw;
+    color: #fff;
+    border-radius: 0.2vw;
+    background: #191919;
+    border: 1px solid #000;
+    position: absolute;
+    top: -1.9vw;
+    right: -0.7vw;
+}
+.skill .progress .progress-value:after{
+    content: "";
+    border-top: 0.7vw solid #191919;
+    border-left: 0.7vw solid transparent;
+    border-right: 0.7vw solid transparent;
+    position: absolute;
+    bottom: -0.5vw;
+    left: 26%;
+}
+@-webkit-keyframes animate-positive{
+    0% { width: 0; }
+}
+@keyframes animate-positive{
+    0% { width: 0; }
+}
+
+/*社会实践*/
+.pratice-big{
+    width: 91.8vw;
+    padding: 3.7vw 3.7vw;
+    margin-left: 3.7vw;
+    margin-top: 3.7vw;
+    box-sizing: border-box;
+    border: 3px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.2);
+}
+.pratice-big .practice-middle{
+    width: 84.4vw;
+    padding: 3.7vw 3.7vw;
+    box-sizing: border-box;
+    border: 3px solid rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.3);
+}
+.pratice-big .practice-middle .practice-small{
+    width: 77vw;
+    border: 3px solid rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.4);
+    padding:3.7vw 4.4vw;
+    box-sizing: border-box;
+    position: relative;
+}
+.pratice-big .practice-middle .practice-small .box .date{
+    position: relative;
+    float: left;
+    height: 3.7vw;
+    width: 10vw;
+    min-height: 30px;
+    font-family: Garamond, serif;
+    font-size: 1.5vw;
+    color:lightskyblue;
+    background-color: rgba(25, 25, 25, 0.50);
+    text-align: center;
+    line-height: 1.2;
+    border-top-left-radius:0.7vw;
+    border-bottom-left-radius:0.7vw;
+    transition: 500ms;
+}
+.pratice-big .practice-middle .practice-small .box .date .circul{
+    position: absolute;
+    height: 1.4vw;
+    width: 1.4vw;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: lightskyblue;
+    left: 9.3vw;
+    top:1.2vw;
+    transition: 500ms;
+}
+.pratice-big .practice-middle .practice-small .box .contain{
+    display: inline-block;
+    width: 55vw;
+    /*min-width: 513px;*/
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+    background-color: #ffffff;
+    border:1px solid #257891;
+    right:0px;
+    padding: 0.7vw 1.8vw 1.8vw 2.2vw;
+    border-radius: 0.7vw;
+    box-shadow: 0 1px 6px #2396af, 0 1px 6px #2396af, 0 1px 6px #2396af;
+    transition: 500ms;
+    opacity: 0;
+}
+.pratice-big .practice-middle .practice-small .box .contain.flowr{
+    animation: flowr 1s linear ;
+    opacity: 1;
+}
+@keyframes flowr {
+    0%{
+        opacity: 0;
+        right:-4vw;
+    }
+    100%{
+        opacity: 1;
+        right:0;
+    }
+}
+.pratice-big .practice-middle .practice-small .box .contain .arrow{
+    position: absolute;
+    width: 0px;
+    border: 1vw solid transparent;
+    border-right-color: #a6d1df;
+    right:100%;
+    top:0.9vw;
+    transition: 500ms;
+}
+.pratice-big .practice-middle .practice-small .box .contain p{
+    line-height:2;
+    font-size: 1.2vw;
+    display: inline-block;
+    width: 36.5vw;
+    margin-left: 10px;
+
+}
+.pratice-big .practice-middle .practice-small .box .contain .job{
+    line-height:3;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+.pratice-big .practice-middle .practice-small .box .contain .job span{
+    display: inline-block;
+    /*margin-left: 40px;*/
+}
+.pratice-big .practice-middle .practice-small .box .contain .bg-picture{
+    width: 13.3vw;
+    height: 11vw;
+    border-radius: 0.7vw;
+}
+.pratice-big .practice-middle .practice-small .box .contain .job1{
+    background-image: url(./images/job1.jpg);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.pratice-big .practice-middle .practice-small .box .contain .job2{
+    background-image: url(./images/job2.jpg);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.pratice-big .practice-middle .practice-small .box .contain .job3{
+    background-image: url(./images/job3.jpg);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.pratice-big .practice-middle .practice-small .box:hover .date{
+    border-top-left-radius:25px;
+    border-bottom-left-radius:25px;
+    background-color: rgba(25, 25, 25, 0.89);
+    color: dodgerblue;
+}
+.pratice-big .practice-middle .practice-small .box:hover .circul{
+    background-color: dodgerblue;
+}
+.pratice-big .practice-middle .practice-small .box:hover .contain{
+    /*box-shadow: 2px 2px 4px #424d90;*/
+    box-shadow: 0 3px 15px #2396af, 0 3px 15px #2396af, 0 3px 15px #2396af;
+}
+.pratice-big .practice-middle .practice-small .box:hover .arrow{
+    border-right-color: #a6d1df;
+}
+.boundary{
+    height: 50px;
+}
+
+/*联系*/
+.contact{
+    box-sizing: border-box;
+    width: 98.7vw;
+    padding: 2.8vw 6.6vw 3.7vw 5.9vw;
+    position: relative;
+}
+.contact .way a{
+    display: block;
+}
+.contact .way,.contact .hobby{
+    font-size: 1.5vw;
+    line-height: 2;
+    color: #5b5b5b;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.contact .hobby a {
+    display: inline-block;
+    text-align: center;
+    margin-left: 4.8vw;
+    line-height:1.5
+}
+.contact .hobby .title{
+    margin-left: 4.4vw;
+}
+.contact .hobby .icon{
+    height: 3.7vw;
+    width: 3.7vw;
+    box-sizing: border-box;
+    line-height:2.2;
+    display: inline-block;
+    border-radius: 50%;
+    transition: 700ms;
+}
+.contact .wrap{
+    width: 14vw;
+    height: 14vw;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 3px 3px 7px #8b6c41;
+    transition: 500ms;
+}
+.contact .wrap .picture{
+    width: 14vw;
+    height: 14vw;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-image: url(./images/touxiang.jpg);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: go 10s linear 0s infinite normal;
+    transition: 500ms;
+    opacity: 0.8;
+}
+@keyframes go {
+    from{
+        transform:rotateZ(0deg);
+    }
+    to{
+        transform:rotateZ(360deg);
+    }
+}
+.contact a:hover{
+    color:white;
+}
+.contact a:hover .icon{
+    background-color: #5b5b5b;
+    border:2px solid white;
+}
+.contact .wrap:hover,.contact .wrap .picture:hover{
+    animation-play-state: paused;
+    height: 14.8vw;
+    width: 14.8vw;
+    opacity: 1;
+}
+
